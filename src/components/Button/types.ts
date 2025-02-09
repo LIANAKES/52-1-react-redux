@@ -1,9 +1,7 @@
-import { ReactNode } from 'react';
-
-export interface MainButtonProps  {
-    name?: string,
-    type?: 'submit' | 'button' | 'reset',
+export interface ButtonProps {
+    name?: string;
+    type?: "submit" | "button" | "reset";
     onClick?: () => void;
     disabled?: boolean;
-    children?: ReactNode;
-}
+    isRed?: boolean;
+  }

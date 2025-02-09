@@ -1,48 +1,32 @@
 import styled from "@emotion/styled";
 
-export const FeedbackWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    background-color: #f19be5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
-  `;
-  
-export const ButtonWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
- `;
+// export const = styled.``
 
-  
- export const Counter = styled.span`
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
- `;
-  
-  export const ResetWrapper = styled.div`
-    margin-top: 20px;
-  `;
-  
- export const ButtonStyled = styled.div`
-    padding: 10px 16px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-  
-`;
-  
+export const FeedbackContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 800px;
+  padding: 20px;
+  background-color: rgb(129, 212, 212);
+`
 
-  
- 
-  
+export const FeedbackResultContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  width: 100%;
+`
+
+export const LikeDislikeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+`
+
+export const Result = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(17, 17, 70);
+`

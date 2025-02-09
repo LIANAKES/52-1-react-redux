@@ -1,21 +1,37 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-export const MainButton = styled.button`
-  padding: 10px 20px;
+interface MainButtonStyledProps {
+  disabled: boolean;
+  $isRed: boolean;
+}
+
+export const MainButton = styled.button<MainButtonStyledProps>`
+  width: 100%;
+  min-height: 70px;
+  outline: none;
   border: none;
-  border-radius: 8px;
+  padding: 20px;
+  background:${({ disabled, $isRed }) => disabled ? '#bebec7' : $isRed ? '#f02e0c' : '#1f27f5'};
+  border-radius: 4px;
+  color: white;
+  font-family: Lato, Geneva, Tahoma, sans - serif;
   font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
-  background-color: ${(props) => (props.disabled ? "#dccb86" : "#007bff")};
-  color: ${(props) => (props.disabled ? "#999" : "#fff")};
-  transition: background-color 0.3s;
+`
 
-  &:hover {
-    background-color: ${(props) => (props.disabled ? "#20e15a" : "#0056b3")};
-  }
 
-  &:disabled {
-    cursor: not-allowed;
-  }
-`;
+
+// .main-button {
+//   width: 100%;
+//   min-height: 70px;
+//   outline: none;
+//   border: none;
+//   padding: 20px;
+//   background: #1f27f5;
+//   border-radius: 4px;
+//   color: white;
+//   font-family: Lato, Geneva, Tahoma, sans-serif;
+//   font-size: 16px;
+//   cursor: pointer;
+// }
+
