@@ -3,7 +3,7 @@ import { ButtonWrapper, CounterWrapper, ResultContainer } from "./styles";
 //9. Импортируем хуки для диспатча и получения данных (селекторов)
 import { useAppDispatch, useAppSelector } from "store/hooks";
 //10. Импортируем экшены и селекторы, которые были созданы и экспортированы  в файле со слайсом
-import { counterActions, counterSelectors } from "store/redax/counter/counterSlice";
+import { counterActions, counterSelectors } from "store/redux/counter/counterSlice";
 
 function Counter() {
   // 11. Забираем значение каунтера из store

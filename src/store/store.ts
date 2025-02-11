@@ -1,14 +1,16 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { combineSlices, configureStore } from "@reduxjs/toolkit"
 import { setupListeners } from "@reduxjs/toolkit/query"
-import { counterSlice } from "./redax/counter/counterSlice"
-import { userSlice } from "./redax/user/userSlice"
+import { counterSlice } from "./redux/counter/counterSlice"
+import { userSlice } from "./redux/user/userSlice"
+import { feedbackSlice } from "./redux/feedback/feedbackSlice"
+import { randomJokesSlice } from "./redux/randomJokes/randomJikesSlice"
 
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.
 
 // 8. Передаём созданные слайсы в combineSlices
-const rootReducer = combineSlices(counterSlice, userSlice)
+const rootReducer = combineSlices(counterSlice, userSlice, feedbackSlice, randomJokesSlice)
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>
 

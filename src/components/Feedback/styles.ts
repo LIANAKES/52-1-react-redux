@@ -30,3 +30,4 @@ export const Result = styled.div`
   font-weight: bold;
   color: rgb(17, 17, 70);
 `
+

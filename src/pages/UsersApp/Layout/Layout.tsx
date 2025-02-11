@@ -25,7 +25,7 @@ function Layout({ children }: LayoutProps) {
     <LayoutWrapper>
       <Header>
         <HeaderLogoContainer onClick={goToHomePage}>
-          <HeaderLogo src={Logo}/>
+          <HeaderLogo src={Logo} />
         </HeaderLogoContainer>
         <NavContainer>
           <StyledNavLink
@@ -44,12 +44,36 @@ function Layout({ children }: LayoutProps) {
           >
             Users
           </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/lesson17"
+          >
+            Lesson 17
+          </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/homework17"
+          >
+            Homework 17
+          </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/lesson18"
+          >
+            Lesson 18
+          </StyledNavLink>
         </NavContainer>
       </Header>
       <Main>{children}</Main>
       <Footer>
         <HeaderLogoContainer onClick={goToHomePage}>
-          <HeaderLogo src={Logo}/>
+          <HeaderLogo src={Logo} />
         </HeaderLogoContainer>
         <FooterNavContainer>
           <StyledLink to="/">Home</StyledLink>
@@ -61,4 +85,5 @@ function Layout({ children }: LayoutProps) {
 }
 
 export default Layout
+
 

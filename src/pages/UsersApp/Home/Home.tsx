@@ -6,7 +6,7 @@ import { useFormik } from "formik"
 import { UserFormNames } from "./types"
 import { v4 } from 'uuid';
 import { useAppDispatch } from "store/hooks"
-import { usersActions } from "store/redax/user/userSlice"
+import { usersActions } from "store/redux/user/userSlice"
 
 function Home() {
 
